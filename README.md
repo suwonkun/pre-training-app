@@ -1,24 +1,8 @@
-# README
+トピックに対して、投稿ができるように実装する。
+※レイアウトに関しては、コメントアウトしています（topics/show.html.erb）
+動作動画:https://www.loom.com/share/8684d956952e4c7e89c69729527ec749
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1.投稿のpostモデルを作成
+2.マイグレーションの実行（カラムはname,body。外部キーにtopic_idを指定）
+3.postコントローラーの作成
+4.コントローラー内メソッド記述（index,create)
