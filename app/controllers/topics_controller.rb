@@ -17,7 +17,7 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:format])
+    @topic = Topic.find(params[:id])
     # @newpost = Post.new(:topic_id => params[:format])
     # @posts = Post.where(topic_id: params[:format])
   end
