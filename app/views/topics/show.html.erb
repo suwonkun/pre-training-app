@@ -12,7 +12,7 @@
 <%
 =begin %>
 <h3>新規書き込み</h3>
-<%= form_for @newpost, :url => post_create_path do |f| %>
+<%= form_for @newpost, :url => posts_create_path do |f| %>
   <p>お名前</p>
   <p><%= f.text_field :name %></p>
   <p>本文</p>
