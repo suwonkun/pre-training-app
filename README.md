@@ -16,6 +16,33 @@
 投稿Model名: Post
 カラム名: name, body
 
+### Topic詳細ページのレイアウトについて
+以下のコードを作成したpotic詳細ページのviewに貼り付けてください
+```
+<h1><%= @topic.title %></h1>
+
+<% @posts.each_with_index do |post , idx| %>
+  <p>
+    <%= idx + 1 %>. <%= post.name %> : <%= post.body %>
+  </p>
+<% end %>
+
+<h3>新規書き込み</h3>
+<%= form_for @newpost, :url => posts_create_path do |f| %>
+  <p>お名前</p>
+  <p><%= f.text_field :name %></p>
+  <p>本文</p>
+  <p><%= f.text_area :body %></p>
+  <%= f.hidden_field :topic_id %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to root_path do %>
+<button>戻る</button>
+<% end %>
+```
+
+
 ### 完了報告手順
 
 1.トピックの削除が前と同じようにできているか確認
