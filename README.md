@@ -5,9 +5,9 @@
 トピックの詳細画面でトピックに対しての投稿が全て表示させるようにする。
 
 
-※レイアウトと一部に関しては、コメントアウトしています。適宜コメントアウトを解除して、実装してください。
+※topics_controllerに関しては、コメントアウトしています。適宜コメントアウトを解除して、実装してください。
 
-該当ファイル：topics/show.html.erb、topics_controller.rb
+該当ファイル：topics_controller.rb
 
 動作動画:https://www.loom.com/share/8684d956952e4c7e89c69729527ec749
 
