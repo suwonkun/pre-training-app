@@ -1,17 +1,17 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.all
+    @topics = topic.all
     @newTopic = Topic.new
   end
 
   def create
     @topic = Topic.new(params[:topic].permit(:title))
     @topic.save
-    redirect_to root_path
+    redirect_to route_path
   end
 
   def delete
-    @topic = Topic.find(params[:id])
+    @topic = Topic.find(params[:topic])
     @topic.destroy
     redirect_to root_path
   end
